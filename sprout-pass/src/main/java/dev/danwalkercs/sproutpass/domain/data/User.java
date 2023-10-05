@@ -24,7 +24,7 @@ public class User {
     private String providerId;
     private String providerName;
     private String emailId;
-    private LocalDate lastLogin;
+    private LocalDate lastLoginDt;
     private LocalDate createdDt;
     private LocalDate lastUpdatedDt;
 }
