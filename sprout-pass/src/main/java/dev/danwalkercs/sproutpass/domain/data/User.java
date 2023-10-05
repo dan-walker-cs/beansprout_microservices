@@ -9,7 +9,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.time.LocalDate;
+import java.time.ZonedDateTime;
 
 @Entity
 @Data
@@ -24,7 +24,7 @@ public class User {
     private String providerId;
     private String providerName;
     private String emailId;
-    private LocalDate lastLoginDt;
-    private LocalDate createdDt;
-    private LocalDate lastUpdatedDt;
+    private ZonedDateTime lastLoginDt;
+    private ZonedDateTime createdDt;
+    private ZonedDateTime lastUpdatedDt;
 }
