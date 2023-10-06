@@ -2,6 +2,8 @@
 -- Description: Creates the table to store user authentication and audit data
 -- Author: dan-walker-cs
 
+select 'Beginning create_user_table...';
+
 CREATE TABLE IF NOT EXISTS `user` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
     `provider_id` VARCHAR(256) NOT NULL COMMENT 'OAuth2 provider ID',
@@ -12,3 +14,5 @@ CREATE TABLE IF NOT EXISTS `user` (
     `last_updated_dt` DATETIME DEFAULT NULL COMMENT 'Datetimetamp representing the last record update',
     PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='sprout-pass user registration and authentication information table.';
+
+select 'Completed create_user_table.';

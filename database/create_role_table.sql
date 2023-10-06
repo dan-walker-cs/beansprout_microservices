@@ -2,6 +2,8 @@
 -- Description: Creates the table to store system role information
 -- Author: dan-walker-cs
 
+select 'Beginning create_role_table...';
+
 CREATE TABLE IF NOT EXISTS `role` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
 	`label` VARCHAR(32) NOT NULL COMMENT 'String representation of role information. Must be unique.',
@@ -10,3 +12,5 @@ CREATE TABLE IF NOT EXISTS `role` (
     PRIMARY KEY (`id`),
     UNIQUE (`label`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='sprout-pass system role information';
+
+select 'Completed create_user_table.';

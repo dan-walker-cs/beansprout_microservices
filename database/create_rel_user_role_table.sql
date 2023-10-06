@@ -2,6 +2,8 @@
 -- Description: Creates the table to store relationship data between user and role tables
 -- Author: dan-walker-cs
 
+select 'Beginning create_rel_user_role_table...';
+
 CREATE TABLE IF NOT EXISTS `rel_user_role` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
     `user_id` INT(11) NOT NULL COMMENT 'Reference to the id column of the user table',
@@ -12,3 +14,5 @@ CREATE TABLE IF NOT EXISTS `rel_user_role` (
     FOREIGN KEY `fk_rel_user_role_user_id` (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
     FOREIGN KEY `fk_rel_user_role_role_id` (`role_id`) REFERENCES `role` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=utf8 COMMENT='sprout-pass user registration and authentication information table.';
+
+select 'Completed create_rel_user_role_table.';
