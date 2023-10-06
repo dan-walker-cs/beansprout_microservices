@@ -16,8 +16,8 @@ public class SecurityConfig {
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
         return http
                 .authorizeHttpRequests( auth -> {
-                    auth.requestMatchers("/public/*").permitAll();
-                    auth.requestMatchers("/secured/*").authenticated();
+                    auth.requestMatchers("/open/*").permitAll();
+                    auth.requestMatchers("/secure/*").authenticated();
                 })
                 .oauth2Login(withDefaults())
                 .build();
