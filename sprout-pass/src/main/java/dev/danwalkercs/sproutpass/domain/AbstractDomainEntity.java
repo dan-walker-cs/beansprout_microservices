@@ -8,7 +8,7 @@ import java.time.ZonedDateTime;
 
 @MappedSuperclass
 @Data
-@RequiredArgsConstructor
+@NoArgsConstructor
 public class AbstractDomainEntity implements Serializable {
 
     @Id

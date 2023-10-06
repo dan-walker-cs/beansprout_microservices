@@ -1,10 +1,8 @@
 package dev.danwalkercs.sproutpass.domain.data;
 
+import dev.danwalkercs.sproutpass.domain.AbstractDomainEntity;
 import jakarta.persistence.Entity;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.ZonedDateTime;
 
@@ -13,7 +11,8 @@ import java.time.ZonedDateTime;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class User {
+@EqualsAndHashCode(callSuper = false)
+public class User extends AbstractDomainEntity {
 
     private String providerId;
     private String providerName;
