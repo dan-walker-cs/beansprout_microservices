@@ -12,7 +12,7 @@ import java.time.ZonedDateTime;
 public class AbstractDomainEntity implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NonNull
     protected Long id;
 
