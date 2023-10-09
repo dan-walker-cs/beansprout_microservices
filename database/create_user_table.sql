@@ -6,8 +6,8 @@ select 'Beginning create_user_table...';
 
 CREATE TABLE IF NOT EXISTS `user` (
 	`id` INT(11) NOT NULL AUTO_INCREMENT,
-    `provider_id` VARCHAR(256) NOT NULL COMMENT 'OAuth2 provider ID',
-    `provider_name` VARCHAR(256) NOT NULL COMMENT 'OAuth2 provider name',
+    `auth_id` VARCHAR(256) NOT NULL COMMENT 'Authentication principal identifier',
+    `username` VARCHAR(32) NOT NULL COMMENT 'Account pseudonym',
     `email_id` VARCHAR(256) DEFAULT NULL COMMENT 'Optionally provided contact email',
     `last_login_dt` DATETIME DEFAULT NULL COMMENT 'Datetimestamp representing the last system access',
     `created_dt` DATETIME NOT NULL COMMENT 'Datetimestamp representing the user registration',
