@@ -1,7 +1,11 @@
 package dev.danwalkercs.sproutpass.repository.data;
 
-import dev.danwalkercs.sproutpass.domain.data.User;
+import dev.danwalkercs.sproutpass.domain.data.BSMUser;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface UserRepository extends JpaRepository<User, Long> {
+import java.util.Optional;
+
+public interface UserRepository extends JpaRepository<BSMUser, Long> {
+
+    Optional<BSMUser> findOneByAuthId(String authId);
 }
