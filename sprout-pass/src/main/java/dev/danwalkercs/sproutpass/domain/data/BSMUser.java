@@ -7,6 +7,9 @@ import lombok.*;
 
 import java.time.ZonedDateTime;
 
+/**
+ * Entity class to represent Beansprout Microservices system-level users.
+ */
 @Entity
 @Table(name = "user")
 @Data

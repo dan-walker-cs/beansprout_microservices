@@ -7,6 +7,9 @@ import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import lombok.*;
 
+/**
+ * Entity class to represent Beansprout Microservices system-level roles.
+ */
 @Entity
 @Data
 @Builder

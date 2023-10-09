@@ -23,6 +23,9 @@ import java.util.Objects;
 import java.util.Random;
 
 
+/**
+ * BSMUser authentication logic.
+ */
 @Service
 public class CustomUserDetailsService implements UserDetailsService {
 

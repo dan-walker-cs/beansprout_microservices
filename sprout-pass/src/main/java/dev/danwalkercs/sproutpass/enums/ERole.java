@@ -1,5 +1,8 @@
 package dev.danwalkercs.sproutpass.enums;
 
+/**
+ * Enumeration of Role values.
+ */
 public enum ERole {
 
     ADMIN(1L),

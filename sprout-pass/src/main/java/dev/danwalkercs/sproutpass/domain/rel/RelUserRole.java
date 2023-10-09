@@ -6,6 +6,9 @@ import dev.danwalkercs.sproutpass.domain.data.BSMUser;
 import jakarta.persistence.*;
 import lombok.*;
 
+/**
+ * Entity class to represent the relationship between a Beansprout Microservices system-level user and a system-level role.
+ */
 @Entity
 @Data
 @Builder

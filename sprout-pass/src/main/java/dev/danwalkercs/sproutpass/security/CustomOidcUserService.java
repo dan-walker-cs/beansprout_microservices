@@ -9,6 +9,9 @@ import org.springframework.security.oauth2.core.oidc.user.DefaultOidcUser;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.stereotype.Service;
 
+/**
+ * OIDC authentication logic. Top-level implementation for OAUTH2 tokens, apparently.
+ */
 @Service
 public class CustomOidcUserService extends OidcUserService {
 

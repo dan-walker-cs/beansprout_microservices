@@ -5,6 +5,9 @@ import org.springframework.security.oauth2.client.authentication.OAuth2Authentic
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+/**
+ * Controller class for BSMUser data as it relates to authentication and session management.
+ */
 @RestController
 public class UserController implements SecureController {
 

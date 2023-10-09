@@ -1,5 +1,8 @@
 package dev.danwalkercs.sproutpass.common;
 
+/**
+ * Class file for all Sprout-Pass microservice constants.
+ */
 public class Constant {
 
     public static final String[] DEFAULT_USERNAME_POOL = {

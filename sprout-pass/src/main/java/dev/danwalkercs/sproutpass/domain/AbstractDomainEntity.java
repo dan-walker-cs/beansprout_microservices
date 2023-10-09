@@ -7,6 +7,9 @@ import java.io.Serializable;
 import java.time.ZonedDateTime;
 import java.util.Objects;
 
+/**
+ * Base class for all Database Entities.
+ */
 @MappedSuperclass
 @Data
 @NoArgsConstructor
