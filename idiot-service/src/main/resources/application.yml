@@ -1,9 +1,14 @@
 spring:
   application:
-    name: 'idiot-service'
+    name: idiot-service
 
 server:
-  port: 8091
+  port: 9050
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka
 
 URIEncoding: UTF-8
 

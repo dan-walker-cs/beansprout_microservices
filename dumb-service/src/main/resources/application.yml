@@ -1,9 +1,14 @@
 spring:
   application:
-    name: 'dumb-service'
+    name: dumb-service
 
 server:
-  port: 8090
+  port: 9000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka
 
 URIEncoding: UTF-8
 

@@ -11,14 +11,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-public class IdiotController {
+public class DiscoveryController {
 
     @Autowired
     private DiscoveryClient discoveryClient;
 
     @GetMapping("/")
     public String getIdiot() {
-        return "Hello, from the IdiotService!";
+        return "Hello, from idiot-service!";
     }
 
     @RequestMapping("/service-instances/{applicationName}")
