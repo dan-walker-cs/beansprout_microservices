@@ -1,9 +1,10 @@
-spring:
-  application:
-    name: 'dumb-service'
-
 server:
-  port: 8090
+  port: 8761
+
+eureka:
+  client:
+    register-with-eureka: false
+    fetch-registry: false
 
 URIEncoding: UTF-8
 

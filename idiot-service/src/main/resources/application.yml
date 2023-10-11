@@ -1,3 +1,7 @@
+spring:
+  application:
+    name: 'idiot-service'
+
 server:
   port: 8091
 
