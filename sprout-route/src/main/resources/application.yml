@@ -1,0 +1,22 @@
+server:
+  port: 8200
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8100/eureka
+
+spring:
+  application:
+    name: sprout-route
+  cloud:
+    gateway:
+      routes:
+        - id: dumb-service
+          uri: http://localhost:9000/service-instances/dumb-service
+          predicates:
+            - Path=/dumb-service
+        - id: idiot-service
+          uri: http://localhost:9050/service-instances/idiot-service
+          predicates:
+            - Path=/idiot-service
