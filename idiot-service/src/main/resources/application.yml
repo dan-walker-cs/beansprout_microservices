@@ -1,0 +1,13 @@
+server:
+  port: 8091
+
+URIEncoding: UTF-8
+
+logging:
+  level:
+    org:
+      springframework:
+        web.servlet.mvc.method.annotation.RequestMappingHandlerMapping: TRACE
+        security: TRACE
+        nodeValue: DEBUG
+      hibernate: ERROR
