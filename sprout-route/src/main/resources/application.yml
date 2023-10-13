@@ -1,5 +1,5 @@
 server:
-  port: 8200
+  port: 8080
 
 eureka:
   client:
@@ -7,16 +7,35 @@ eureka:
       defaultZone: http://localhost:8100/eureka
 
 spring:
-  application:
-    name: sprout-route
   cloud:
     gateway:
       routes:
         - id: dumb-service
-          uri: http://localhost:9000/service-instances/dumb-service
+          uri: lb://dumb-service
           predicates:
-            - Path=/dumb-service
+            - Path=/dumb-service/{segment}
+          filters:
+            - StripPrefix=1
         - id: idiot-service
-          uri: http://localhost:9050/service-instances/idiot-service
+          uri: lb://idiot-service
           predicates:
-            - Path=/idiot-service
+            - Path=/idiot-service/{segment}
+          filters:
+            - StripPrefix=1
+        - id: sprout-seek
+          uri: http://localhost:8100
+          predicates:
+            - Path=/eureka/web/**
+  application:
+    name: sprout-route
+
+logging:
+  level:
+    org:
+      springframework:
+        cloud:
+          gateway:
+            route:
+              RouteDefinitionLocator: DEBUG
+            nodeValue: TRACE
+    root: DEBUG

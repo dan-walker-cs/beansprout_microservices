@@ -16,7 +16,7 @@ public class DiscoveryController {
     @Autowired
     private DiscoveryClient discoveryClient;
 
-    @GetMapping("/")
+    @GetMapping("/pulse")
     public String getIdiot() {
         return "Hello, from idiot-service!";
     }
