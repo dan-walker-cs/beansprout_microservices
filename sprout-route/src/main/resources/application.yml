@@ -7,6 +7,8 @@ eureka:
       defaultZone: http://localhost:8100/eureka
 
 spring:
+  application:
+    name: sprout-route
   cloud:
     gateway:
       routes:
@@ -26,8 +28,6 @@ spring:
           uri: http://localhost:8100
           predicates:
             - Path=/eureka/web/**
-  application:
-    name: sprout-route
 
 logging:
   level:
